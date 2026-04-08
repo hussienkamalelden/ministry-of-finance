@@ -1,0 +1,51 @@
+<section class="page-hero" dir="rtl">
+  <div class="page-container">
+    <a routerLink="/dashboard" class="page-back">&rarr; العودة للوحة التفاعلية</a>
+    <h1 class="page-title">عجز/فائض الميزانية والدين العام</h1>
+    <p class="page-subtitle">بيانات عجز وفائض الميزانية والدين العام للمملكة</p>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3 class="chart-card__title">عجز/فائض الميزانية</h3>
+        <p class="chart-card__desc">مليار ريال - الإيرادات مقابل النفقات</p>
+        <canvas baseChart [type]="deficitSurplusChart.type" [data]="deficitSurplusChart.data" [options]="deficitSurplusChart.options" height="280"></canvas>
+        <div class="chart-legend">
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>إجمالي الإيرادات</span>
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>إجمالي النفقات</span>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3 class="chart-card__title">الدين العام</h3>
+        <p class="chart-card__desc">مليار ريال</p>
+        <canvas baseChart [type]="publicDebtChart.type" [data]="publicDebtChart.data" [options]="publicDebtChart.options" height="280"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3 class="chart-card__title">نسبة الدين من الناتج المحلي</h3>
+        <p class="chart-card__desc">النسبة المئوية %</p>
+        <canvas baseChart [type]="debtRatioChart.type" [data]="debtRatioChart.data" [options]="debtRatioChart.options" height="280"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3 class="chart-card__title">حركة الاقتراض</h3>
+        <p class="chart-card__desc">مليار ريال - إصدارات محلية وخارجية</p>
+        <canvas baseChart [type]="borrowingChart.type" [data]="borrowingChart.data" [options]="borrowingChart.options" height="280"></canvas>
+        <div class="chart-legend">
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>الإصدارات المحلية</span>
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>الإصدارات الخارجية</span>
+        </div>
+      </div>
+
+      <div class="chart-card" style="grid-column: 1 / -1">
+        <h3 class="chart-card__title">الاحتياطيات الحكومية</h3>
+        <p class="chart-card__desc">القيمة (مليار ريال) والنسبة من الناتج المحلي</p>
+        <canvas baseChart [type]="reservesChart.type" [data]="reservesChart.data" [options]="reservesChart.options" height="280"></canvas>
+        <div class="chart-legend">
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>القيمة</span>
+          <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#f5a623"></span>النسبة من الناتج المحلي</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
