@@ -47,6 +47,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/govsa-ds/dist",
+                "output": "govsa-ds"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/govsa-ds/fonts",
+                "output": "govsa-ds/fonts"
               }
             ],
             "styles": [

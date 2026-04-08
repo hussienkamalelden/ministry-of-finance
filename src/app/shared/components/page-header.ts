@@ -4,13 +4,26 @@ import { Component, input } from '@angular/core';
   selector: 'app-page-header',
   standalone: true,
   template: `
-    <div class="mb-8">
-      <h1 class="text-2xl font-bold text-text-primary">{{ title() }}</h1>
+    <div class="page-header">
+      <h1>{{ title() }}</h1>
       @if (subtitle()) {
-        <p class="text-text-secondary mt-1">{{ subtitle() }}</p>
+        <p>{{ subtitle() }}</p>
       }
     </div>
   `,
+  styles: [`
+    .page-header { margin-bottom: 24px; }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+    p {
+      color: var(--color-text-secondary);
+      margin-top: 4px;
+      font-size: 14px;
+    }
+  `],
 })
 export class PageHeaderComponent {
   title = input.required<string>();

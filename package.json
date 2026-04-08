@@ -16,6 +16,7 @@
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "govsa-ds": "^1.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -23,9 +24,7 @@
     "@angular/build": "^21.2.6",
     "@angular/cli": "^21.2.6",
     "@angular/compiler-cli": "^21.2.0",
-    "@tailwindcss/postcss": "^4.2.2",
     "prettier": "^3.8.1",
-    "tailwindcss": "^4.2.2",
     "typescript": "~5.9.2"
   }
 }

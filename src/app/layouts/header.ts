@@ -4,51 +4,99 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   template: `
-    <header class="h-16 bg-primary text-white flex items-center justify-between px-6 shadow-md z-20">
-      <div class="flex items-center gap-3">
-        <button
-          class="lg:hidden p-2 rounded-md hover:bg-primary-light transition-colors"
-          (click)="toggleSidebar()"
-          aria-label="Toggle sidebar"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+    <div class="d-flex justify-content-between px-3" dir="rtl">
+      <div>
+        <a href="#" class="govsa-link">البيانات المفتوحة</a> |
+        <a href="#" class="govsa-link">الأرقام الدولية</a> |
+        <a href="#" class="govsa-link">تواصل معنا</a>
+      </div>
+      <div>
+        <a href="#" class="govsa-link">EN</a> |
+        <a href="#" class="govsa-link">18/10/1447 - 12:02 م</a>
+      </div>
+    </div>
+    <header class="govsa-header" dir="rtl">
+      <nav class="govsa-header__navigation-m" role="navigation">
+        <div class="govsa-header__navigation">
+          <input type="checkbox" class="govsa-header__navigation__checkbox" id="nav-togge" />
+          <label for="nav-togge" class="govsa-header__navigation__button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="govsa-header__navigation__menu">
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">عن الوزارة</a>
+            </li>
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">ميزانية الدولة</a>
+            </li>
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">المركز الإعلامي</a>
+            </li>
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">الخدمات الإلكترونية</a>
+            </li>
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">مركز المعرفة</a>
+            </li>
+            <li class="govsa-header__navigation__menu-item">
+              <a href="#">تسجيل الدخول</a>
+            </li>
+          </ul>
+        </div>
+        <div class="full-screen"></div>
+      </nav>
+
+      <a class="govsa-header__logo" href="#">
+        <img src="govsa-ds/images/logo-govsa.svg" width="136" alt="وزارة المالية">
+      </a>
+
+      <nav class="govsa-header__navigation-d navbar-expand-lg" role="navigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">عن الوزارة</a>
+            <div class="govsa-tabs--border"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ميزانية الدولة</a>
+            <div class="govsa-tabs--border"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">المركز الإعلامي</a>
+            <div class="govsa-tabs--border"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">الخدمات الإلكترونية</a>
+            <div class="govsa-tabs--border"></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">مركز المعرفة</a>
+            <div class="govsa-tabs--border"></div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="govsa-header__avatar">
+        <i class="govsa--user"></i>
+      </div>
+
+      <div class="govsa-header__search__container">
+        <button class="govsa-header__search-button" type="button">
+          <i class="govsa--zoom"></i>
         </button>
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center font-bold text-primary-dark text-sm">
-            MF
-          </div>
-          <div>
-            <h1 class="text-lg font-semibold leading-tight">Ministry of Finance</h1>
-            <p class="text-xs text-white/70 hidden sm:block">Government Portal</p>
-          </div>
+        <div class="govsa-header__search__input-group">
+          <input type="text" class="govsa-header__search-input govsa-input" placeholder="بحث">
+          <button class="govsa-header__search-clear d-none">
+            <i class="govsa--close"></i>
+          </button>
         </div>
       </div>
 
-      <div class="flex items-center gap-4">
-        <button class="relative p-2 rounded-full hover:bg-primary-light transition-colors" aria-label="Notifications">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-          </svg>
-          <span class="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full"></span>
-        </button>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 bg-primary-light rounded-full flex items-center justify-center text-sm font-medium">
-            A
-          </div>
-          <span class="hidden md:inline text-sm font-medium">Admin</span>
-        </div>
-      </div>
+      <a href="#" class="govsa-header__vison-2030">
+        <img src="govsa-ds/images/vision-2030-white.svg" width="68" alt="رؤية 2030">
+      </a>
     </header>
   `,
 })
-export class HeaderComponent {
-  sidebarOpen = false;
-
-  toggleSidebar(): void {
-    this.sidebarOpen = !this.sidebarOpen;
-    document.dispatchEvent(new CustomEvent('toggle-sidebar'));
-  }
-}
+export class HeaderComponent {}

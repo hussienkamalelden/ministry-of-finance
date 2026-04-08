@@ -1,0 +1,139 @@
+.budget-hero {
+  background: linear-gradient(135deg, #043a21 0%, #0b6b3a 40%, #065430 100%);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-hero__overlay {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.budget-hero__title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  direction: rtl;
+}
+
+.budget-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 32px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  min-height: 180px;
+}
+
+.budget-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  color: #fff;
+  text-decoration: none;
+}
+
+.budget-card__icon {
+  opacity: 0.9;
+}
+
+.budget-card__label {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Row 2: only 2 cards, center them in the 3-col grid */
+.budget-card:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.budget-card:nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .budget-hero__title {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .budget-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .budget-card {
+    padding: 24px 16px;
+    min-height: 150px;
+  }
+
+  .budget-card__label {
+    font-size: 15px;
+  }
+
+  .budget-card:nth-child(4),
+  .budget-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .budget-hero {
+    min-height: auto;
+  }
+
+  .budget-hero__overlay {
+    padding: 32px 16px;
+  }
+
+  .budget-hero__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .budget-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .budget-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: auto;
+    gap: 14px;
+  }
+
+  .budget-card__icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .budget-card__label {
+    font-size: 16px;
+    text-align: start;
+  }
+}
