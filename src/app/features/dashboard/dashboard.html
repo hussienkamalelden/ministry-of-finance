@@ -1,11 +1,16 @@
 <section class="budget-hero" dir="rtl">
   <div class="budget-hero__overlay">
-    <h1 class="budget-hero__title">اللوحة التفاعلية للميزانية</h1>
+    <h1 class="budget-hero__title text-center">اللوحة التفاعلية للميزانية</h1>
     <div class="budget-grid">
       @for (card of cards; track card.route; let i = $index) {
-        <a [routerLink]="card.route" class="budget-card" [style.animation-delay]="(i * 0.12) + 's'">
+        <a [routerLink]="card.route" class="budget-card" [style.animation-delay]="i * 0.12 + 's'">
           <div class="budget-card__icon">
-            <lucide-icon [img]="card.icon" [size]="48" color="white" [strokeWidth]="1.2"></lucide-icon>
+            <lucide-icon
+              [img]="card.icon"
+              [size]="48"
+              color="white"
+              [strokeWidth]="1.2"
+            ></lucide-icon>
           </div>
           <span class="budget-card__label">{{ card.label }}</span>
         </a>
