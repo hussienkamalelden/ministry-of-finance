@@ -3,3 +3,48 @@ html, body {
   margin: 0;
   direction: rtl;
 }
+
+/* ========== HEADER: white background ========== */
+.govsa-header {
+  background: #fff !important;
+  background-image: none !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.govsa-header .nav-link,
+.govsa-header .nav-item a {
+  color: #333 !important;
+}
+
+.govsa-header .nav-link:hover {
+  color: #0b6b3a !important;
+}
+
+.govsa-header .govsa-header__navigation__button span {
+  background-color: #333 !important;
+}
+
+.govsa-header .govsa-header__avatar i {
+  color: #333 !important;
+}
+
+.govsa-header .govsa-header__search-button i {
+  color: #333 !important;
+}
+
+.govsa-header .govsa-header__vison-2030 img {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(90%) saturate(500%) hue-rotate(120deg);
+}
+
+.govsa-header .govsa-tabs--border {
+  background: #0b6b3a !important;
+}
+
+/* ========== TOP BAR ========== */
+.govsa-link {
+  color: #555 !important;
+}
+
+.govsa-link:hover {
+  color: #0b6b3a !important;
+}

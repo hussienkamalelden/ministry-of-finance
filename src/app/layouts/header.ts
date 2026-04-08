@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -18,13 +18,14 @@ import { Component } from '@angular/core';
     <header class="govsa-header" dir="rtl">
       <nav class="govsa-header__navigation-m" role="navigation">
         <div class="govsa-header__navigation">
-          <input type="checkbox" class="govsa-header__navigation__checkbox" id="nav-togge" />
-          <label for="nav-togge" class="govsa-header__navigation__button">
+          <button class="govsa-header__navigation__button"
+            [class.active]="menuOpen()"
+            (click)="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
-          </label>
-          <ul class="govsa-header__navigation__menu">
+          </button>
+          <ul class="govsa-header__navigation__menu" [class.d-block]="menuOpen()">
             <li class="govsa-header__navigation__menu-item">
               <a href="#">عن الوزارة</a>
             </li>
@@ -45,11 +46,13 @@ import { Component } from '@angular/core';
             </li>
           </ul>
         </div>
-        <div class="full-screen"></div>
+        @if (menuOpen()) {
+          <div class="full-screen" (click)="closeMenu()"></div>
+        }
       </nav>
 
       <a class="govsa-header__logo" href="#">
-        <img src="govsa-ds/images/logo-govsa.svg" width="136" alt="وزارة المالية">
+        <img src="assets/images/logo.png" height="55" alt="وزارة المالية">
       </a>
 
       <nav class="govsa-header__navigation-d navbar-expand-lg" role="navigation">
@@ -98,5 +101,23 @@ import { Component } from '@angular/core';
       </a>
     </header>
   `,
+  styles: [`
+    :host .govsa-header__navigation__menu.d-block {
+      display: block !important;
+      transform: translateX(0) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  `],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  menuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.menuOpen.update(v => !v);
+  }
+
+  closeMenu(): void {
+    this.menuOpen.set(false);
+  }
+}

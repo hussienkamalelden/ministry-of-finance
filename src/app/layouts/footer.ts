@@ -23,7 +23,6 @@ import { Component } from '@angular/core';
       </div>
 
       <div class="d-md-flex justify-content-around pt-5 px-2">
-        <!-- نظرة عامة -->
         <div>
           <ul class="quick-links">
             <li>نظرة عامة</li>
@@ -37,7 +36,6 @@ import { Component } from '@angular/core';
           </ul>
         </div>
 
-        <!-- الدعم والمساعدة -->
         <div>
           <ul class="quick-links">
             <li>الدعم والمساعدة</li>
@@ -49,7 +47,6 @@ import { Component } from '@angular/core';
           </ul>
         </div>
 
-        <!-- روابط مهمة -->
         <div>
           <ul class="quick-links">
             <li>روابط مهمة</li>
@@ -62,13 +59,10 @@ import { Component } from '@angular/core';
           </ul>
         </div>
 
-        <!-- تابعنا على + أدوات -->
         <div>
-          <div class="contact-us-div d-md-flex justify-content-between p-md-0">
-            <div class="p-2">
-              <p>تابعنا على</p>
-            </div>
-          </div>
+          <ul class="quick-links">
+            <li>تابعنا على</li>
+          </ul>
           <div class="d-flex social-icons-container mb-3">
             <div class="p-2">
               <img src="govsa-ds/images/facebook.svg" alt="فيسبوك" width="36">
@@ -80,12 +74,9 @@ import { Component } from '@angular/core';
               <img src="govsa-ds/images/twitter.svg" alt="إكس" width="36">
             </div>
           </div>
-
-          <div class="contact-us-div d-md-flex justify-content-between p-md-0">
-            <div class="p-2">
-              <p>أدوات سهولة الوصول</p>
-            </div>
-          </div>
+          <ul class="quick-links">
+            <li>أدوات سهولة الوصول</li>
+          </ul>
           <div class="footer-bordered-div align-items-center mb-3">
             <div class="d-md-flex justify-content-around align-items-center footer-div-border">
               <div class="p-2">
@@ -93,8 +84,8 @@ import { Component } from '@angular/core';
               </div>
               <div class="p-2">
                 <div class="custom-control custom-switch govsa-switch">
-                  <input type="checkbox" class="custom-control-input" id="customSwitches-rtl-footer">
-                  <label class="custom-control-label" for="customSwitches-rtl-footer"></label>
+                  <input type="checkbox" class="custom-control-input" id="customSwitches-rtl">
+                  <label class="custom-control-label" for="customSwitches-rtl"></label>
                 </div>
               </div>
             </div>
@@ -107,14 +98,9 @@ import { Component } from '@angular/core';
               </div>
             </div>
           </div>
-
-          <div class="contact-us-div p-2 mb-3">
-            <p>دعم لغة الإشارة الحية</p>
-          </div>
-
-          <div class="contact-us-div p-2">
-            <p>حمل التطبيق</p>
-          </div>
+          <ul class="quick-links mb-2">
+            <li>حمل التطبيق</li>
+          </ul>
           <div class="d-flex p-2">
             <a href="#" class="mr-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" height="36">
