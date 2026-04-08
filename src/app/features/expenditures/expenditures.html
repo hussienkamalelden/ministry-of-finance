@@ -8,7 +8,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">إجمالي النفقات</h3>
         <p class="chart-card__desc">مليار ريال - ميزانية / فعلي / تقديرات</p>
-        <canvas baseChart [type]="totalExpenseChart.type" [data]="totalExpenseChart.data" [options]="totalExpenseChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="totalExpenseChart.type" [data]="totalExpenseChart.data" [options]="totalExpenseChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>ميزانية</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>فعلي</span>
@@ -19,7 +21,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">النفقات بحسب القطاع</h3>
         <p class="chart-card__desc">مليار ريال</p>
-        <canvas baseChart [type]="sectorBreakdownChart.type" [data]="sectorBreakdownChart.data" [options]="sectorBreakdownChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="sectorBreakdownChart.type" [data]="sectorBreakdownChart.data" [options]="sectorBreakdownChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>2024</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>2025</span>
@@ -29,7 +33,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">النفقات الجارية مقابل الرأسمالية</h3>
         <p class="chart-card__desc">مليار ريال</p>
-        <canvas baseChart [type]="capitalVsCurrentChart.type" [data]="capitalVsCurrentChart.data" [options]="capitalVsCurrentChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="capitalVsCurrentChart.type" [data]="capitalVsCurrentChart.data" [options]="capitalVsCurrentChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>جارية</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#f5a623"></span>رأسمالية</span>
@@ -39,7 +45,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">توزيع النفقات بحسب النوع</h3>
         <p class="chart-card__desc">النسبة المئوية % - 2025</p>
-        <canvas baseChart [type]="expenseShareChart.type" [data]="expenseShareChart.data" [options]="expenseShareChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="expenseShareChart.type" [data]="expenseShareChart.data" [options]="expenseShareChart.options"></canvas>
+        </div>
       </div>
     </div>
   </div>

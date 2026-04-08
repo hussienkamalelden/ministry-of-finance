@@ -8,7 +8,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">إجمالي الإيرادات</h3>
         <p class="chart-card__desc">مليار ريال - ميزانية / فعلي / توقعات</p>
-        <canvas baseChart [type]="totalRevenueChart.type" [data]="totalRevenueChart.data" [options]="totalRevenueChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="totalRevenueChart.type" [data]="totalRevenueChart.data" [options]="totalRevenueChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>ميزانية</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>فعلي</span>
@@ -19,7 +21,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">الإيرادات النفطية وغير النفطية</h3>
         <p class="chart-card__desc">مليار ريال - مكدس</p>
-        <canvas baseChart [type]="oilVsNonOilChart.type" [data]="oilVsNonOilChart.data" [options]="oilVsNonOilChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="oilVsNonOilChart.type" [data]="oilVsNonOilChart.data" [options]="oilVsNonOilChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>نفطية</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>غير نفطية</span>
@@ -29,7 +33,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">الإيرادات غير النفطية</h3>
         <p class="chart-card__desc">القيمة (مليار ريال) والنسبة من الناتج المحلي</p>
-        <canvas baseChart [type]="nonOilGrowthChart.type" [data]="nonOilGrowthChart.data" [options]="nonOilGrowthChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="nonOilGrowthChart.type" [data]="nonOilGrowthChart.data" [options]="nonOilGrowthChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>القيمة</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#f5a623"></span>النسبة من الناتج المحلي</span>
@@ -39,7 +45,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">مصادر الإيرادات</h3>
         <p class="chart-card__desc">النسبة المئوية % - 2025</p>
-        <canvas baseChart [type]="revenueSourceChart.type" [data]="revenueSourceChart.data" [options]="revenueSourceChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="revenueSourceChart.type" [data]="revenueSourceChart.data" [options]="revenueSourceChart.options"></canvas>
+        </div>
       </div>
     </div>
   </div>

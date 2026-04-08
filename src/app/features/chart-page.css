@@ -48,6 +48,8 @@
   border-radius: 12px;
   padding: 24px;
   backdrop-filter: blur(8px);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .chart-card__title {
@@ -64,8 +66,20 @@
   margin: 0 0 20px;
 }
 
+.chart-card__canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
 .chart-card canvas {
-  max-height: 280px;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.chart-card--full {
+  grid-column: 1 / -1;
 }
 
 .chart-legend {
@@ -90,12 +104,134 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 0 20px;
+  }
+
   .charts-grid {
-    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .chart-card {
+    padding: 20px;
+  }
+
+  .chart-card__canvas-wrap {
+    height: 250px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 24px 0;
+  }
+
+  .page-container {
+    padding: 0 16px;
   }
 
   .page-title {
     font-size: 22px;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .chart-card[style*="grid-column"],
+  .chart-card--full {
+    grid-column: auto !important;
+  }
+
+  .chart-card__canvas-wrap {
+    height: 220px;
+  }
+
+  .chart-card__title {
+    font-size: 15px;
+  }
+
+  .chart-legend {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .chart-legend__item {
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 16px 0;
+    min-height: auto;
+  }
+
+  .page-container {
+    padding: 0 12px;
+  }
+
+  .page-title {
+    font-size: 19px;
+    margin: 12px 0 4px;
+  }
+
+  .page-subtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .page-back {
+    font-size: 12px;
+  }
+
+  .charts-grid {
+    gap: 12px;
+  }
+
+  .chart-card {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  .chart-card__canvas-wrap {
+    height: 200px;
+  }
+
+  .chart-card__title {
+    font-size: 14px;
+  }
+
+  .chart-card__desc {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .chart-legend {
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .chart-legend__item {
+    font-size: 10px;
+  }
+
+  .chart-legend__dot {
+    width: 8px;
+    height: 8px;
   }
 }

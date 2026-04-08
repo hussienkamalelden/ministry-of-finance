@@ -8,7 +8,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">معدل التضخم وسعر الفائدة</h3>
         <p class="chart-card__desc">النسبة المئوية %</p>
-        <canvas baseChart [type]="inflationChart.type" [data]="inflationChart.data" [options]="inflationChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="inflationChart.type" [data]="inflationChart.data" [options]="inflationChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#f5a623"></span>التضخم</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>سعر الفائدة</span>
@@ -18,7 +20,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">معدل البطالة</h3>
         <p class="chart-card__desc">النسبة المئوية %</p>
-        <canvas baseChart [type]="unemploymentChart.type" [data]="unemploymentChart.data" [options]="unemploymentChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="unemploymentChart.type" [data]="unemploymentChart.data" [options]="unemploymentChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>ذكور</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>إناث</span>
@@ -28,7 +32,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">أسعار النفط</h3>
         <p class="chart-card__desc">دولار / برميل</p>
-        <canvas baseChart [type]="oilPriceChart.type" [data]="oilPriceChart.data" [options]="oilPriceChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="oilPriceChart.type" [data]="oilPriceChart.data" [options]="oilPriceChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>2024</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#a0e8cc"></span>2025</span>
@@ -38,7 +44,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">تكوين الناتج المحلي</h3>
         <p class="chart-card__desc">النسبة المئوية من الناتج المحلي %</p>
-        <canvas baseChart [type]="gdpCompositionChart.type" [data]="gdpCompositionChart.data" [options]="gdpCompositionChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="gdpCompositionChart.type" [data]="gdpCompositionChart.data" [options]="gdpCompositionChart.options"></canvas>
+        </div>
       </div>
     </div>
   </div>

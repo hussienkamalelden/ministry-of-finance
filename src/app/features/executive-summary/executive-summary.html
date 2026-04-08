@@ -8,7 +8,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">الإيرادات مقابل النفقات</h3>
         <p class="chart-card__desc">مليار ريال</p>
-        <canvas baseChart [type]="revenueExpenseChart.type" [data]="revenueExpenseChart.data" [options]="revenueExpenseChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="revenueExpenseChart.type" [data]="revenueExpenseChart.data" [options]="revenueExpenseChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>الإيرادات</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#2a7f62"></span>النفقات</span>
@@ -18,13 +20,17 @@
       <div class="chart-card">
         <h3 class="chart-card__title">نمو الناتج المحلي الإجمالي</h3>
         <p class="chart-card__desc">النسبة المئوية %</p>
-        <canvas baseChart [type]="gdpGrowthChart.type" [data]="gdpGrowthChart.data" [options]="gdpGrowthChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="gdpGrowthChart.type" [data]="gdpGrowthChart.data" [options]="gdpGrowthChart.options"></canvas>
+        </div>
       </div>
 
       <div class="chart-card">
         <h3 class="chart-card__title">عجز / فائض الميزانية</h3>
         <p class="chart-card__desc">مليار ريال</p>
-        <canvas baseChart [type]="deficitChart.type" [data]="deficitChart.data" [options]="deficitChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="deficitChart.type" [data]="deficitChart.data" [options]="deficitChart.options"></canvas>
+        </div>
         <div class="chart-legend">
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#4dd0a1"></span>فائض</span>
           <span class="chart-legend__item"><span class="chart-legend__dot" style="background:#e74c5e"></span>عجز</span>
@@ -34,7 +40,9 @@
       <div class="chart-card">
         <h3 class="chart-card__title">توزيع النفقات بحسب القطاع</h3>
         <p class="chart-card__desc">مليار ريال - 2025</p>
-        <canvas baseChart [type]="sectorChart.type" [data]="sectorChart.data" [options]="sectorChart.options" height="280"></canvas>
+        <div class="chart-card__canvas-wrap">
+          <canvas baseChart [type]="sectorChart.type" [data]="sectorChart.data" [options]="sectorChart.options"></canvas>
+        </div>
       </div>
     </div>
   </div>
